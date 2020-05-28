@@ -1,0 +1,456 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+#mainNav{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 60px;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	color: rgb(208, 255, 38);
+	background-color: rgba(0,0,0,0.2);
+}
+#mainNav h1{
+	font-size: 40px;
+	transition: color 0.5s;
+}
+#mainNav .logo a{
+	color: rgb(208, 255, 38);
+	text-decoration: none;
+}
+#mainNav ul{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	width: 650px;
+	padding-right: 100px;
+	justify-content: space-around;
+}
+#mainNav ul li a{
+	text-decoration: none;
+	color: rgb(208, 255, 38);
+	font-weight: 500;
+}
+#mainNav.is-sticky {
+	padding: 0 60px;
+  background: rgb(208, 255, 38);
+}
+#mainNav.is-sticky a, #mainNav.is-sticky .logo h1{
+  color:#000;
+}
+#mainNav ul li a:hover{
+	color: rgb(255, 226, 5);
+}
+#mainNav.is-sticky a:hover{
+	color: rgb(100, 43, 255);
+}
+.images{
+	height: 750px;
+	background-image: url('grass.jpg');
+	background-size: 100% 100%;
+}
+.images h1{
+	font-size: 75px;
+	top: 200px;
+	position: absolute;
+	padding: 70px;
+	padding-right: 600px;
+	color: rgb(100, 43, 255);
+	line-height: 85px;
+	text-shadow: 1px 1px black;
+}
+#logoname{
+	color: rgb(208, 255, 38);	
+	text-shadow: 1.5px 1.5px black;
+}
+#goal{
+	top: 100px;
+	right: 0;
+	position: absolute;
+	transform: rotateY(180deg);
+}
+#ball{
+	top: 500px;
+	left: 0;
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	padding-top: 20px;
+	padding-left: 60px;
+}
+.swim{
+	background-image:url('swimming.jpg');
+  	height:700px;
+}
+.swim .sport{
+	top: 150px;
+	position: absolute;
+	padding: 40px 200px;
+	background-color: rgba(100, 43, 255,0.5);
+	height: 330px;
+}
+.swim .sport p{
+	top: 50px;
+	position: relative;
+	font-size: 30px;
+	color: rgb(255, 226, 5);
+	text-shadow: 1px 1px black;	
+}
+.learnmore{
+  position: relative;
+  top: 80px;
+  height: 50px;
+  width: 160px;
+  border: 2px rgb(255, 226, 5) solid;
+  border-radius: 4px;
+  background: none;
+  font-size: 20px;
+  color: rgb(255, 226, 5);
+  margin: 20px 10px;
+}
+.learnmore:before {
+  content: "";
+  position: absolute;
+  background: blue;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 0.09s ease-in;
+}
+.learnmore:hover:before {
+  top: 0;
+}
+
+.about{
+	background-color: rgb(208, 255, 38);
+	padding: 40px 200px;
+}
+.about p{
+	text-align: center;
+	font-size: 16px;
+}
+.court,.swim{
+  position:relative;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  text-align: center;
+}
+.court{
+  	background-image:url('track.jpg');
+	height: 400px;
+}
+.court .memberbtn{
+	padding: 40px 200px;
+	height: 200px;
+}
+.court .memberbtn p{
+	top: 50px;
+	position: relative;
+	font-size: 55px;
+	color: rgb(208, 255, 38);
+	text-shadow: 1px 1px black;	
+}
+.member{
+	border: 2px rgb(208, 255, 38) solid;
+	color: rgb(208, 255, 38);
+}
+.member:before{
+	background-color: rgb(250, 98, 32);
+}
+
+/*	SPORTS	*/
+
+
+.heading{
+    height: 300px;
+    width: 100%;
+}
+.heading img{
+	filter: grayscale(55%);
+    width: 100%;
+    height: 100%;
+}
+.heading h1{
+	position: absolute;
+	top: 220px;
+	left: 60px;
+    font-size: 35px;
+    color: rgb(208, 255, 38);
+    text-shadow: 1.5px 1.5px black;
+    animation: sport 1s forwards;
+}
+@keyframes sport{
+	0%{
+		top: 50px;
+	}
+	100%{
+		top: 220px;
+	}
+}
+.sportswrapper{
+    width: 100%;
+}
+.sportswrapper .td{
+	position: relative;
+    width: 50%;
+    float: left;
+    height: 330px;
+}
+.sportswrapper .image{
+	position: relative;
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.sportswrapper .td .image img{
+	filter: grayscale(55%);
+    width: 100%;
+    height: 100%;
+}
+.sportswrapper .td .details{
+	top: 0;
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: scaleY(0);
+    font-size: 35px;
+	color: rgb(208, 255, 38);
+    transition: transform 0.4s;
+    line-height: 320px;
+    background-color: rgba(0,0,0,0.5);
+}
+.sportswrapper .td:hover .image img{
+    opacity: 0.7;
+    transition: 0.5s;
+    transform: scale(1.3);
+}
+.sportswrapper .td:hover .details{
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+
+/*	MEMBERSHIP	*/
+
+
+.logincontainer{
+	  background: #191919;
+	  height: 100vh;
+}
+.box{
+  width: 500px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 17px 10px;
+  width: 250px;
+  outline: none;
+  color: white;
+  border-radius: 35px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 320px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+.box a{
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	margin: 20px 40px;
+}
+.box a:hover{
+	color: rgb(220,220,220);
+}
+
+
+.signupcontainer{
+	  background: #191919;
+	  height: 1600px;
+}
+.signinbtn{
+	background: rgb(208, 255, 38);
+	height: 50px;
+	top: 80px;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+.signinbtn a{
+	text-decoration: underline;
+	color: black;
+	font-size: 16px;
+	font-weight: bolder;
+}
+.signinbtn a:hover{
+	color: rgb(50,50,50);
+}
+.register
+{
+	top: 150px;
+	position: absolute;
+	text-align: center;
+    width: 100%;
+    color: white;
+}
+.register h2{
+	margin: 45px 0;
+	text-transform: uppercase;
+}
+.register label{
+    color: rgb(208, 255, 38);
+    font-size: 17px;
+}
+.register input,.register select{
+	text-align: center;
+	padding: 5px 10px;
+	width: 250px;
+	height: 35px;
+	border: 2px solid;
+	border-radius: 30px;
+	margin: 10px 10px;
+  	color: white;
+  	outline: none;
+  	background: none;
+  	transition: 0.25s;
+}
+.register input:focus{
+  width: 300px;
+  border-color: rgb(208, 255, 38);
+}
+.register select{
+	width: 280px;
+	height: 45px;
+	background-color: #191919;
+}
+.register select:focus{
+	width: 330px;
+ 	border-color: rgb(208, 255, 38);
+}
+.sportscheckbox{
+	margin: 0 auto;
+	background-color: rgb(30,30,30);
+}
+.sportscheckbox td{
+  	padding: 10px 18px;
+}
+.sportscheckbox input,.sportscheckbox input:focus{
+	height: 18px;
+	width: 18px;
+}
+.sportscheckbox label{
+	font-size: 15px;
+}
+#sub{
+	width: 180px;
+	height: 60px;
+	border: 2px solid rgb(208, 255, 38);
+	color: rgb(208, 255, 38);
+	font-size: 17px;
+}
+#sub:hover{
+	background: rgb(20,20,20);
+}
+
+
+.membercard{
+	text-align: center;
+	background: rgb(52, 235, 146);
+	padding: 70px 370px;
+}
+#registercard{
+	text-align: center;
+	background: rgb(52, 250, 115);
+	padding: 10px 0px;
+}
+.registercardfixed{
+	top: 60px;	
+	width: 100%;
+	position: fixed;
+}
+.mctwo{
+	background: rgb(255, 194, 25);
+}
+.mcthree{
+	background: rgb(0, 221, 237);
+}
+.rc{
+	height: 40px;
+  	width: 150px;
+  	border-radius: 4px;
+  	background: none;
+	font-size: 15px;
+	margin: 0 70px;
+	border: none;
+	transition: 0.5s;
+}
+.rc:hover{
+	background-color: rgb(208, 255, 38);	
+}
+
+
+
+
+.contact{
+	background-image: url("court.jpg");
+	background-size: cover;
+	height: 1000px;
+	text-align: center;
+	padding: 120px 450px;
+	color: rgb(255, 194, 25);
+}
+.contact p,.contact h2{
+	color: rgb(208, 255, 38);
+}
+.contact h1{
+	margin: 30px 0;
+}
+.contactdetails{
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.3);
+}
+.contactdetails td{
+  	padding: 40px 60px;
+}
