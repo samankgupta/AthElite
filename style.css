@@ -415,7 +415,6 @@
 }
 .mcthree{
 	background: rgb(0, 221, 237);
-	height: 160px;
 }
 .rc{
 	height: 40px;
@@ -455,3 +454,136 @@
 .contactdetails td{
   	padding: 40px 60px;
 }
+
+.displaycontainer{
+	  background: #191919;
+	  height: 100vh;
+	  color: white;
+	  text-align: center;
+}
+.displaycontainer .displaybox{
+	padding:  120px 0; 
+}
+.displaycontainer p{
+	top: 150px;
+	position: relative;
+}
+.displaycontainer h1{
+	margin: 20px 0;
+	font-size: 38px;
+}
+.displaycontainer a{
+	font-size: 18px;
+	top: 80px;
+	position: relative;
+	text-decoration: none;
+	color: rgb(52, 250, 115);
+}
+.displaycontainer a:hover{
+	color:#2ecc71;
+}
+
+.addcontainer{
+	background: #191919;
+	height: 100vh;
+	color: rgb(52, 250, 115);
+	text-align: center;
+}
+.addcontainer .addbox{
+	padding: 100px 0;
+}
+.addcontainer form{
+	top: 50px;
+	position: relative;	
+}
+.addcontainer form tr{
+	color: rgb(208, 255, 38);
+}
+.addcontainer a{
+	font-size: 16px;
+	top: 130px;
+	position: relative;
+	text-decoration: none;
+	color: rgb(52, 250, 115);
+}
+.addcontainer a:hover{
+	color:#2ecc71;
+}
+.addcontainer input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 8px auto;
+  text-align: center;
+  border: 2px solid rgb(208, 255, 38);
+  padding: 12px 35px;
+  outline: none;
+  color: #2ecc71;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  font-size: 15px;
+}
+.addcontainer input[type = "submit"]:hover{
+  background: rgb(20,20,20);
+}
+
+.forgotcontainer{
+	background: #191919;
+	height: 100vh;
+	color: rgb(52, 250, 115);
+	text-align: center;
+}
+.forgotcontainer .forgotbox{
+	padding-top: 150px;
+}
+.forgotcontainer input{
+	text-align: center;
+	padding: 5px 10px;
+	width: 250px;
+	height: 35px;
+	border: 2px solid;
+	border-radius: 30px;
+	margin: 10px 10px;
+  	color: white;
+  	outline: none;
+  	background: none;
+  	transition: 0.25s;
+}
+.forgotcontainer input:focus{
+  width: 300px;
+  border-color: rgb(208, 255, 38);
+}
+.forgotcontainer a{
+	font-size: 16px;
+	top: 100px;
+	position: relative;
+	text-decoration: none;
+	color: rgb(208, 255, 38);
+}
+.forgotcontainer a:hover{
+	color: rgb(52, 250, 115);
+}
+.forgotcontainer input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 0 auto;
+  top: 15px;
+  position: relative;
+  width: 130px;
+  height: 50px;
+  text-align: center;
+  border: 2px solid rgb(208, 255, 38);
+  padding: 12px 35px;
+  outline: none;
+  color: #2ecc71;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  font-size: 15px;
+}
+.forgotcontainer input[type = "submit"]:hover{
+  background: rgb(20,20,20);
+}
+
