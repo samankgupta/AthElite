@@ -1,4 +1,6 @@
 CREATE DATABASE db;
 CREATE TABLE `db`.`member` ( `username` VARCHAR(20) NOT NULL , `password` VARCHAR(20) NOT NULL , `mobile_no` BIGINT(10) NOT NULL , `email_id` VARCHAR(30) NOT NULL , `dob` DATE NOT NULL , `gender` ENUM('Male','Female') NOT NULL , PRIMARY KEY (`username`)) ENGINE = InnoDB;
 CREATE TABLE `db`.`sports` ( `username` VARCHAR(20) NOT NULL , `sport` VARCHAR(20) NOT NULL , PRIMARY KEY (`username`, `sport`)) ENGINE = InnoDB;
+CREATE TABLE `db`.`games` ( `game` VARCHAR(20) NOT NULL , `slot1` VARCHAR(30) NOT NULL , `slot2` VARCHAR(30) NOT NULL , `slot3` VARCHAR(30) NOT NULL , PRIMARY KEY (`game`)) ENGINE = InnoDB;
 ALTER TABLE `sports` ADD FOREIGN KEY (`username`) REFERENCES `member`(`username`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `sports` ADD FOREIGN KEY (`sport`) REFERENCES `games`(`game`) ON DELETE RESTRICT ON UPDATE RESTRICT;

@@ -26,20 +26,26 @@ include 'dbcon.php';
     <div class="displaycontainer">
     	<div class="displaybox">
     		<h1 style='color:rgb(208, 255, 38); padding: 15px 0;'>Welcome <?php $name=$_SESSION['username']; echo $name;?></h1>
-    		<?php $name=$_SESSION['username'];
-			$sql="select sport from sports where username='".$name."';";
+    		
+            <?php $name=$_SESSION['username'];
+			$sql="SELECT games.game , games.slot1, games.slot2 , games.slot3
+            FROM sports
+            INNER JOIN games ON sports.sport=games.game
+            WHERE sports.username='".$name."';";
 			$result=mysqli_query($conn,$sql);
-			if(mysqli_num_rows($result)>0){
+			if(mysqli_num_rows($result)>0)
+            {
 			    echo "<h3 align='center' style='color:rgb(52, 250, 115); padding: 15px 0;'>Your selected sports are :</h3>";
 			    while($row=mysqli_fetch_assoc($result)){
-			        echo "<h4 style='color:rgb(208, 255, 38); padding: 10px 25px; display:inline-block; justify-content:space-around;'>".$row['sport']."</h4>";
+                    echo "<div style='display:inline-block; justify-content:space-around;'><h4 style='color:rgb(208, 255, 38); padding: 8px 25px;'>".$row['game']."</h4><h5 style='padding: 5px 25px;'>".$row['slot1']."<br>".$row['slot2']."<br>".$row['slot3']."</h5></div>";
 			    }
 			}
-			else{echo "you have not selected any sports";}  ?>
+			else{echo "you have not selected any sports";}  
+            ?>
 
 		    <h3><a href="add.php">Add Sport</a></h3>
 		    <h3><a href="delete.php">Delete Sport</a></h3>
-		    <p><a href="login.php">logout</a></p>
+		    <p><a href="login.php" id="logout">logout</a></p>
     	</div>
 	</div>
     <script type="text/javascript" src='main.js'></script>
@@ -50,3 +56,4 @@ include 'dbcon.php';
 
 </body>
 </html>
+

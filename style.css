@@ -482,6 +482,9 @@
 .displaycontainer a:hover{
 	color:#2ecc71;
 }
+.displaycontainer #logout{
+	top: 40px;
+}
 
 .addcontainer{
 	background: #191919;

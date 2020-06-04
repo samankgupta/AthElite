@@ -3,10 +3,13 @@ session_start();
 include 'dbcon.php';
 $name=$_SESSION['username'];
 if(isset($_REQUEST['delete'])){
+    if(!empty($_REQUEST['sports']))
+    { 
     $sports=$_REQUEST['sports'];
     for($i=0; $i<count($sports); $i++){
         $sql="delete from sports where username='".$name."' and sport='".$sports[$i]."';";
         mysqli_query($conn,$sql);
+    }
     }
 }
 ?>
@@ -57,7 +60,7 @@ if(isset($_REQUEST['delete'])){
         <tr>
             <td><input type="checkbox" id="swimming" name='sports[]' value="Swimming"></td>
             <td><label for="swimming">Swimming</label></td>
-            <td><input type="checkbox" id="lawntennis" value="Tennis"></td>
+            <td><input type="checkbox" id="lawntennis" name='sports[]' value="Lawn Tennis"></td>
             <td><label for="lawntennis">Lawn Tennis</label></td>
             <td><input type="checkbox" id="hockey" name='sports[]' value="Hockey"></td>
             <td><label for="hockey">Hockey</label><br></td>
@@ -79,7 +82,7 @@ if(isset($_REQUEST['delete'])){
             <td><label for="karate">Karate</label><br></td>
         </tr>
         </table><br>
-            <input type="submit" name="delete" value="Delete">
+            <input type="submit" name="delete" value="Delete" id="delete">
             </form>
             <a href="display.php">Go Back</a>
         </div>

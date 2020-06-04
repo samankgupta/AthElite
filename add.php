@@ -3,10 +3,13 @@ session_start();
 include 'dbcon.php';
 $name=$_SESSION['username'];
 if(isset($_REQUEST['add'])){
+    if(!empty($_REQUEST['sports']))
+    {
     $sports=$_REQUEST['sports'];
     for($i=0; $i<count($sports); $i++){
         $sql="insert into sports values('".$name."','".$sports[$i]."');";
         mysqli_query($conn,$sql);
+    }
     }
 }?>
 <!DOCTYPE html>
@@ -56,7 +59,7 @@ if(isset($_REQUEST['add'])){
         <tr>
             <td><input type="checkbox" id="swimming" name='sports[]' value="Swimming"></td>
             <td><label for="swimming">Swimming</label></td>
-            <td><input type="checkbox" id="lawntennis" value="Tennis"></td>
+            <td><input type="checkbox" id="lawntennis" name='sports[]' value="Lawn Tennis"></td>
             <td><label for="lawntennis">Lawn Tennis</label></td>
             <td><input type="checkbox" id="hockey" name='sports[]' value="Hockey"></td>
             <td><label for="hockey">Hockey</label><br></td>
