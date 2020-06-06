@@ -436,9 +436,9 @@
 .contact{
 	background-image: url("court.jpg");
 	background-size: cover;
-	height: 1000px;
+	height: 1200px;
 	text-align: center;
-	padding: 120px 450px;
+	padding: 120px 40px;
 	color: rgb(255, 194, 25);
 }
 .contact p,.contact h2{
@@ -454,7 +454,10 @@
 .contactdetails td{
   	padding: 40px 60px;
 }
-
+.contactdetails #contacttrainer{
+	font-size: 17.5px;
+	color: rgb(52, 235, 73);
+}
 .displaycontainer{
 	  background: #191919;
 	  height: 100vh;
@@ -465,8 +468,15 @@
 	padding:  120px 0; 
 }
 .displaycontainer p{
-	top: 150px;
+	top: 130px;
 	position: relative;
+}
+.displaycontainer #trainer{
+	top: 0;
+	color:rgb(52, 250, 115);
+	font-size:15.5px;
+	font-weight: bold;
+	padding: 8px 25px;
 }
 .displaycontainer h1{
 	margin: 20px 0;
